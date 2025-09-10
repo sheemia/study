@@ -1,7 +1,11 @@
 {
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "cmath": "cpp",
+    "complex": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
