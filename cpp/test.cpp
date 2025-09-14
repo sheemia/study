@@ -20,11 +20,7 @@ int main()
 {
     int n;
     cin>>n;
-    for(int i=1;i<=n;i++)
-    {
-        if(i%4==0) continue;
-        if(has4(i)) continue;
-        cout<<i<<endl;
-    }
+    if(n%2!=0) cout<<3*n+1<<endl;
+    else cout<<n/2<<endl;
     return 0;
 }
