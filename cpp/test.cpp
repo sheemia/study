@@ -6,21 +6,47 @@
 
 using namespace std;
 
-bool has4(int x)
-{
-    while(x>0)
-    {
-        if(x%10==4) return true;
-        else x/=10;
-    }
-    return false;
-}
+int a[100002];
 
 int main() 
 {
-    int n;
+    int n,m,range;
+    double average;
     cin>>n;
-    if(n%2!=0) cout<<3*n+1<<endl;
-    else cout<<n/2<<endl;
+
+    for(int i=1;i<=n;i++)
+    {
+        long long sum=0;
+        double variance=0;
+        cin>>m;
+        for(int j=1;j<=m;j++)
+        {
+            cin>>a[j];
+        }
+
+        int maxV=a[1];
+        int minV=a[1];
+        for(int k=2;k<=m;k++)
+        {
+            if(a[k]>maxV) maxV=a[k];
+            if(a[k]<minV) minV=a[k];
+        }
+        range=maxV-minV;
+
+        for(int k=1;k<=m;k++)
+        {
+            sum+=a[k];
+        }
+        average=sum*1.0/m;
+
+        for(int k=1;k<=m;k++)
+        {
+            variance+=fabs(a[k]-average)*fabs(a[k]-average);
+        }
+        variance/=m;
+
+        cout<<range<<' ';
+        cout<<fixed<<setprecision(3)<<variance<<endl;
+    }
     return 0;
 }
