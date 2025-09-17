@@ -6,31 +6,14 @@
 
 using namespace std;
 
-int a[11][11];
-int b[11][11];
-
 int main() 
 {
-    int n,m;
-    cin>>n>>m;
-
-    for(int i=0;i<n;i++)
+    string str;
+    cin>>str;
+    for(int i=0;i<str.size();i++)
     {
-        for(int j=0;j<m;j++)
-        {
-            cin>>a[i][j];
-            b[j][i]=a[i][j];
-        }
-    }
-    
-    for(int i=0;i<m;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            cout<<b[i][j]<<' ';
-        }
-        
-        cout<<endl;
+        if(str[i]=='5') cout<<'*';
+        else cout<<str[i];
     }
     return 0;
 }
