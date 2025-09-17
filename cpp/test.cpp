@@ -6,47 +6,31 @@
 
 using namespace std;
 
-int a[100002];
+int a[11][11];
+int b[11][11];
 
 int main() 
 {
-    int n,m,range;
-    double average;
-    cin>>n;
+    int n,m;
+    cin>>n>>m;
 
-    for(int i=1;i<=n;i++)
+    for(int i=0;i<n;i++)
     {
-        long long sum=0;
-        double variance=0;
-        cin>>m;
-        for(int j=1;j<=m;j++)
+        for(int j=0;j<m;j++)
         {
-            cin>>a[j];
+            cin>>a[i][j];
+            b[j][i]=a[i][j];
         }
-
-        int maxV=a[1];
-        int minV=a[1];
-        for(int k=2;k<=m;k++)
+    }
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
         {
-            if(a[k]>maxV) maxV=a[k];
-            if(a[k]<minV) minV=a[k];
+            cout<<b[i][j]<<' ';
         }
-        range=maxV-minV;
-
-        for(int k=1;k<=m;k++)
-        {
-            sum+=a[k];
-        }
-        average=sum*1.0/m;
-
-        for(int k=1;k<=m;k++)
-        {
-            variance+=fabs(a[k]-average)*fabs(a[k]-average);
-        }
-        variance/=m;
-
-        cout<<range<<' ';
-        cout<<fixed<<setprecision(3)<<variance<<endl;
+        
+        cout<<endl;
     }
     return 0;
 }
