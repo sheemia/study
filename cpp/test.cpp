@@ -1,19 +1,15 @@
 #include<iostream>//cout cin endl
 #include<cmath>//sqrt fabs
 #include<iomanip>//fix setprecision
-#include<algorithm>//max sort
+#include<algorithm>//max sort fill
 #include<cstdlib>//abs
 
 using namespace std;
 
 int main() 
 {
-    string str;
-    cin>>str;
-    for(int i=0;i<str.size();i++)
-    {
-        if(str[i]=='5') cout<<'*';
-        else cout<<str[i];
-    }
+    int N;
+    c>>N;
+    
     return 0;
 }
