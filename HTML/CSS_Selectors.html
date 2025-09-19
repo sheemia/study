@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        h2{
+            color:aqua;
+        }
+
+        .highlight{
+            background-color:yellow;
+        }
+
+        #head{
+            font-size:35px;
+        }
+
+        *{
+            font-family:'Courier New', Courier, monospace;
+            font-weight:bolder;
+        }
+
+        .father>.son{
+            color:yellowgreen;
+        }
+
+        .father p{
+            color:brown;
+            font-size:larger;
+        }
+
+        h3+p{
+            background-color:red;
+        }
+
+        #element:hover{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS selectors whit different styles</h1>
+
+    <h2>This is an example of element selector.</h2>
+
+    <h3 class="highlight">This is an example of class selector.</h3><!--h3.highlight+tab-->
+    
+    <h3>This is an another example of class selector.</h3>
+    
+    <h4 id="head">This is an example of ID selector.</h4><!-- h4#head+tab -->
+
+    <div class="father"><!-- .father+tab -->
+        <p class="son">This is an example of child element selector.</p>
+        <div>
+            <p class="grandson">This is an example of descendant selector.</p>
+        </div>
+    </div>
+
+    <p>This is an ordinary "p" label.</p>
+    <h3>This is an adjacent sibling selector label.</h3>
+    <p>This is another "p" label.</p>
+
+    <p id="element">This is an exanple of a pseudo-class selector.</p>
+</body>
+</html>

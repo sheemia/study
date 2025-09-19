@@ -1,30 +1,22 @@
-#include<iostream>//cout cin endl
+#include<iostream>//cout cin endl resize
 #include<cmath>//sqrt fabs
 #include<iomanip>//fix setprecision
 #include<algorithm>//max sort fill
 #include<cstdlib>//abs
+#include<map>//map
  
 using namespace std;
- 
+
 int main()
 {
-    string s1,s2;
-    cin>>s1>>s2;
-
-    if(s1=="elephant"&&s2=="tiger"||
-    s1=="tiger"&&s2=="cat"||
-    s1=="cat"&&s2=="mouse"||
-    s1=="mouse"&&s2=="elephant")
+    string N,ans;
+    cin>>N;
+    for(int i=0;i<N.size();i++)
     {
-        cout<<"win";
+        if(i!=0&&(N.size()-i)%3==0) cout<<',';
+        cout<<N[i];
     }
-    else if(s2=="elephant"&&s1=="tiger"||
-    s2=="tiger"&&s1=="cat"||
-    s2=="cat"&&s1=="mouse"||
-    s2=="mouse"&&s1=="elephant")
-    {
-        cout<<"lose";
-    }
-    else cout<<"tie";
+    
+    cout<<endl;
     return 0;
 }

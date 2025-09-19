@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"e:\\code\\study\\cpp\\test.cpp","tests":[{"id":1757993223905,"input":"114514","output":"114*14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\study\\cpp\\test.cpp","group":"local","local":true}
+{"name":"Local: test","url":"e:\\code\\study\\cpp\\test.cpp","tests":[{"id":1757993223905,"input":"980364535","output":"980,364,535"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\study\\cpp\\test.cpp","group":"local","local":true}
