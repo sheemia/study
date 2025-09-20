@@ -4,19 +4,22 @@
 #include<algorithm>//max sort fill
 #include<cstdlib>//abs
 #include<map>//map
+#include<cctype>//tolower
+#include<string>//to_string
  
 using namespace std;
 
 int main()
 {
-    string N,ans;
-    cin>>N;
-    for(int i=0;i<N.size();i++)
+    int n;
+    string S;
+    cin>>n;
+
+    for(int i=1;i<=n;i++)
     {
-        if(i!=0&&(N.size()-i)%3==0) cout<<',';
-        cout<<N[i];
+        S+=to_string(i);
     }
-    
-    cout<<endl;
+
+    cout<<S[n-1];
     return 0;
 }
