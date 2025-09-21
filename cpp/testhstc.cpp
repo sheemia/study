@@ -1,47 +1,29 @@
-#include<iostream>
+#include<bits/stdc++.h>
  
 using namespace std;
 
-long long factorial(int n)//阶乘
-{
-    long long result=1;
-
-    for(int i=2;i<=n;i++)
-    {
-        result*=i;
-    }
-
-    return result;
-}
-
-long long C(int n,int m)//组合数
-{
-    return factorial(n)/(factorial(m)*factorial(n-m));
-}
-
 int main()
 {
-    int N,M;
-    cin>>N>>M;
-    int n=N*M/2;
-    long long ans=1;
+    int T,n;
+    string str;
+    cin>>T;
 
-    if(N*M%2==0)
+    for(int i=0;i<T;i++)
     {
-        for(int i=1;i<=n;i++)
-        {
-            ans+=C(n,i);
-        }
-    }
-    else
-    {
-        for(int i=1;i<=n;i++)
-        {
-            ans+=C(n,i);
-        }
-        ans*=N*M;
-    }
+        int idx=0;
+        cin>>n>>str;
 
-    cout<<ans<<endl;
+        for(int j=0;j<n;j++)
+        {
+            if(str[j]=='w'&&str[j+1]=='o'&&str[j+2]=='c'&&str[j+3]=='h'&&str[j+4]=='a'&&str[j+5]=='o'&&str[j+6]=='y'&&str[j+7]=='u'&&str[j+8]=='a'&&str[j+9]=='n')
+            {
+                idx=1;
+                break;
+            }
+        }
+
+        if(idx==1) cout<<"yuanzenni?"<<endl;
+        else cout<<"yuanshenqidong!"<<endl;
+    }
     return 0;
 }

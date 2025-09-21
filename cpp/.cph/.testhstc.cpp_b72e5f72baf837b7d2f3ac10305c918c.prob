@@ -1,0 +1,1 @@
+{"name":"Local: testhstc","url":"e:\\code\\study\\cpp\\testhstc.cpp","tests":[{"id":1758364577723,"input":"3\n10\nwochaoyuan\n8\nworiyuan\n15\nwobuwanyuanshen","output":"yuanzenni?\nyuanshenqidong!\nyuanshenqidong!"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\study\\cpp\\testhstc.cpp","group":"local","local":true}
