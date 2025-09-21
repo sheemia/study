@@ -1,25 +1,30 @@
-#include<iostream>//cout cin endl resize
+#include<iostream>//cout cin endl resize cin.ignore
 #include<cmath>//sqrt fabs
 #include<iomanip>//fix setprecision
 #include<algorithm>//max sort fill
 #include<cstdlib>//abs
 #include<map>//map
-#include<cctype>//tolower
-#include<string>//to_string
+#include<cctype>//tolower toupper
+#include<string>//to_string getline
+#include<vector>//vector
+#include<stack>//stack
+#include<queue>//queue
  
 using namespace std;
 
 int main()
 {
-    int n;
-    string S;
-    cin>>n;
+    int a[5];
 
-    for(int i=1;i<=n;i++)
+    for(int i=0;i<5;i++)
     {
-        S+=to_string(i);
+        cin>>a[i];
+        
+        if(a[i]==1)
+        {
+            cout<<i+1<<endl;
+            break;
+        }
     }
-
-    cout<<S[n-1];
     return 0;
 }
