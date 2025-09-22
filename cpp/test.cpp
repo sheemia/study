@@ -1,7 +1,7 @@
 #include<iostream>//cout cin endl resize cin.ignore
 #include<cmath>//sqrt fabs
 #include<iomanip>//fix setprecision
-#include<algorithm>//max sort fill
+#include<algorithm>//max sort fill next_permutation
 #include<cstdlib>//abs
 #include<map>//map
 #include<cctype>//tolower toupper
@@ -12,19 +12,30 @@
  
 using namespace std;
 
+int u[50001];
+int v[50001];
+
 int main()
 {
-    int a[5];
+    int N,ans=0,j=0;
+    cin>>N;
 
-    for(int i=0;i<5;i++)
+    for(int i=0;i<N;i++) cin>>u[i];
+    for(int i=0;i<N;i++) cin>>v[i];
+
+    sort(u,u+N);
+    sort(v,v+N);
+
+    for(int i=0;i<N;i++)
     {
-        cin>>a[i];
-        
-        if(a[i]==1)
+        if(u[i]<v[j]) continue;
+        else
         {
-            cout<<i+1<<endl;
-            break;
+            ans++;
+            j++;
         }
     }
+
+    cout<<ans<<endl;
     return 0;
 }
