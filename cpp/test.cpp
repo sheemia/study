@@ -9,33 +9,77 @@
 #include<vector>//vector
 #include<stack>//stack
 #include<queue>//queue
+#include<set>//set
  
 using namespace std;
 
-int u[50001];
-int v[50001];
+multiset<int> s;
 
 int main()
 {
-    int N,ans=0,j=0;
-    cin>>N;
+    int T;
+    cin>>T;
 
-    for(int i=0;i<N;i++) cin>>u[i];
-    for(int i=0;i<N;i++) cin>>v[i];
-
-    sort(u,u+N);
-    sort(v,v+N);
-
-    for(int i=0;i<N;i++)
+    while(T--)
     {
-        if(u[i]<v[j]) continue;
-        else
+        int n;
+        cin>>n;
+
+        switch(n)
         {
-            ans++;
-            j++;
+            case 1:
+            {
+                int x;
+                cin>>x;
+                s.insert(x);
+                break;
+            }
+
+            case 2:
+            {
+                int x;
+                cin>>x;
+                if(s.count(x)!=0) s.erase(s.find(x));
+                break;
+            }
+
+            case 3:
+            {
+                int x;
+                cin>>x;
+                cout<<s.count(x)<<endl;
+                break;
+            }
+
+            case 4:
+            cout<<s.size()<<endl;
+            break;
+
+            case 5:
+            {
+                int x;
+                cin>>x;
+                auto it=s.lower_bound(x);
+                if(it==s.begin()) cout<<-1<<endl;
+                else{
+                    it--;
+                    cout<<*it<<endl;
+                }
+                break;
+            }
+
+            case 6:
+            {
+                int x;
+                cin>>x;
+                auto it=s.upper_bound(x);
+                if(it==s.end()) cout<<-1<<endl;
+                else{
+                    cout<<*it<<endl;
+                }
+                break;
+            }
         }
     }
-
-    cout<<ans<<endl;
     return 0;
 }
