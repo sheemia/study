@@ -1,0 +1,1 @@
+{"name":"Local: test1","url":"/Users/macbookxxx/code/study/cpp/test1.cpp","tests":[{"id":1758626136072,"input":"3 2 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/macbookxxx/code/study/cpp/test1.cpp","group":"local","local":true}

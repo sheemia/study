@@ -1,30 +1,14 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
 
 using namespace std;
 
-int a[100001];
-
 int main()
-{
-    int N,X;
-    long long ans=0,price=0;
-    cin>>N>>X;
-
-    for(int i=0;i<N;i++)
-    {
-        cin>>a[i];
-    }
-
-    sort(a,a+N);
-
-    for(int i=0;i<N;i++)
-    {
-        if(a[i]-i*X<0) price=0;
-        else price=a[i]-i*X;
-        ans+=price;
-    }
-
-    cout<<ans<<endl;
-
+{   
+    int x,y,z,maxv;
+    cin>>x>>y>>z;
+    maxv=max({x,y,z});
+    while((maxv*3-(x+y+z))%2!=0) maxv++;
+    cout<<(maxv*3-(x+y+z))/2<<endl;
     return 0;
 }

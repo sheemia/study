@@ -13,7 +13,7 @@
  
 using namespace std;
 
-multiset<int> s;
+priority_queue<int> pq;
 
 int main()
 {
@@ -22,63 +22,26 @@ int main()
 
     while(T--)
     {
-        int n;
-        cin>>n;
+        int op;
+        cin>>op;
 
-        switch(n)
+        switch(op)
         {
             case 1:
             {
                 int x;
                 cin>>x;
-                s.insert(x);
+                pq.push(-x);
                 break;
             }
 
             case 2:
-            {
-                int x;
-                cin>>x;
-                if(s.count(x)!=0) s.erase(s.find(x));
-                break;
-            }
-
-            case 3:
-            {
-                int x;
-                cin>>x;
-                cout<<s.count(x)<<endl;
-                break;
-            }
-
-            case 4:
-            cout<<s.size()<<endl;
+            cout<<-pq.top()<<endl;
             break;
 
-            case 5:
-            {
-                int x;
-                cin>>x;
-                auto it=s.lower_bound(x);
-                if(it==s.begin()) cout<<-1<<endl;
-                else{
-                    it--;
-                    cout<<*it<<endl;
-                }
-                break;
-            }
-
-            case 6:
-            {
-                int x;
-                cin>>x;
-                auto it=s.upper_bound(x);
-                if(it==s.end()) cout<<-1<<endl;
-                else{
-                    cout<<*it<<endl;
-                }
-                break;
-            }
+            case 3:
+            pq.pop();
+            break;
         }
     }
     return 0;
