@@ -1,0 +1,1 @@
+{"name":"Local: wintest","url":"e:\\code\\study\\cpp\\wintest.cpp","tests":[{"id":1758812719636,"input":"6 3\n9848 90\n6731 88\n1422 95\n7483 84\n8805 95\n4162 88","output":"88 5\n1422 95\n8805 95\n9848 90\n4162 88\n6731 88"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\study\\cpp\\wintest.cpp","group":"local","local":true}
