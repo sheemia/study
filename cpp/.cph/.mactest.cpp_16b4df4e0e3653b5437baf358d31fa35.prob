@@ -1,0 +1,1 @@
+{"name":"Local: mactest","url":"/Users/macbookxxx/code/study/cpp/mactest.cpp","tests":[{"id":1758886398601,"input":"5 5\n2 1 2 1 2\n1 2 1 2 3","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/macbookxxx/code/study/cpp/mactest.cpp","group":"local","local":true}

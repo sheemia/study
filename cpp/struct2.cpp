@@ -14,10 +14,10 @@ struct Applicant
 
     Applicant() {}
 
-    bool operator<(const Applicant&x)const
+    bool operator<(const Applicant&a,const Applicant&b)
     {
-        if(score!=x.score) return score>x.score;
-        else return registration_number<x.registration_number;
+        if(a.score!=b.score) return a.score>b.score;
+        else return a.registration_number<b.registration_number;
     }
 };
 

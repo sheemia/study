@@ -13,36 +13,31 @@
  
 using namespace std;
 
-priority_queue<int> pq;
+int A[10005];
+int B[10005];
 
 int main()
 {
-    int T;
-    cin>>T;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    while(T--)
+    int n,x;
+    cin>>n>>x;
+
+    for(int i=0;i<2*n;i++)
     {
-        int op;
-        cin>>op;
-
-        switch(op)
-        {
-            case 1:
-            {
-                int x;
-                cin>>x;
-                pq.push(-x);
-                break;
-            }
-
-            case 2:
-            cout<<-pq.top()<<endl;
-            break;
-
-            case 3:
-            pq.pop();
-            break;
-        }
+        if(i<n) cin>>A[i];
+        else cin>>B[i-n];
     }
+
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        if(A[i]<=B[i]) sum+=A[i];
+        else sum+=B[i];
+    }
+
+    long long ans=sum<=x?sum:x;
+    cout<<ans<<endl;
     return 0;
 }
